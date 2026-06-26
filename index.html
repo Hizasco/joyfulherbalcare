@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joyful Herbal Care</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo">
+    <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="18" cy="18" r="18" fill="#1B4332"/>
+      <path d="M18 8 C18 8, 10 14, 10 22 C10 26, 13 30, 18 30 C23 30, 26 26, 26 22 C26 14, 18 8, 18 8Z" fill="#52796F"/>
+      <path d="M18 12 C18 12, 14 18, 14 23 C14 26, 15.5 29, 18 29" stroke="#84A98C" stroke-width="1.5" fill="none"/>
+      <path d="M18 18 C20 16, 24 16, 25 19" stroke="#C9A84C" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div>
+      <div class="logo-text">Joyful Herbal</div>
+      <div class="logo-sub">Care · Nature's Best</div>
+    </div>
+  </a>
+  <nav>
+    <a href="#categories">Categories</a>
+    <a href="#products">Products</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="header-actions">
+    <button class="icon-btn" id="favIconBtn" title="Favourites">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span class="badge" id="favBadge">0</span>
+    </button>
+    <button class="icon-btn" id="cartIconBtn" title="Cart">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      <span class="badge" id="cartBadge">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+  <div class="slides-wrapper" id="slidesWrapper">
+    <div class="slide slide-1">
+      <div class="slide-bg"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <p class="slide-eyebrow">100% Natural · Handcrafted</p>
+        <h1 class="slide-title">Heal from the heart of nature</h1>
+        <p class="slide-desc">Pure herbal remedies sourced from Nigeria's finest botanicals. Your wellness, rooted in tradition.</p>
+        <a href="#products" class="btn-primary">Shop Our Herbs ↓</a>
+      </div>
+    </div>
+    <div class="slide slide-2">
+      <div class="slide-bg"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <p class="slide-eyebrow">Wholesale Savings · Bulk Deals</p>
+        <h1 class="slide-title">Buy more, save more on nature's gold</h1>
+        <p class="slide-desc">Enjoy special bulk pricing when you purchase 2 or more of any item. Stock up on your favourites today.</p>
+        <a href="#products" class="btn-primary">See Bulk Deals ↓</a>
+      </div>
+    </div>
+    <div class="slide slide-3">
+      <!-- Small screen: full background image (inline style avoids file:// CORS block) -->
+      <div class="slide-bg slide-3-bg-mobile" style="background-image:url('media/profit-from-greennature.jpg');"></div>
+      <div class="slide-overlay slide-3-overlay-mobile"></div>
+      <!-- Small screen: text hidden; large screen: text shown on left -->
+      <div class="slide-content slide-3-text">
+        <p class="slide-eyebrow">New Opportunity</p>
+        <h1 class="slide-title">earn from greennature</h1>
+        <p class="slide-desc">get paid by becoming a partner with greennature.</p>
+        <a href="#products" class="btn-primary">Explore jinja ↓</a>
+      </div>
+      <!-- Large screen: image shown on right side -->
+      <div class="slide-3-image-panel">
+        <img src="media/profit-from-greennature.jpg" alt="Profit from GreenNature" class="slide-3-img">
+      </div>
+    </div>
+  </div>
+  <button class="hero-arrow prev" id="heroPrev">&#8249;</button>
+  <button class="hero-arrow next" id="heroNext">&#8250;</button>
+  <div class="hero-dots" id="heroDots"></div>
+</section>
+
+<!-- BOTANICAL DIVIDER -->
+<div class="botanical-divider">
+  <svg width="320" height="40" viewBox="0 0 320 40" fill="none">
+    <line x1="0" y1="20" x2="120" y2="20" stroke="#52796F" stroke-width="1.2"/>
+    <path d="M140 20 C145 10, 155 10, 160 20 C165 30, 175 30, 180 20" stroke="#C9A84C" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <circle cx="160" cy="20" r="3" fill="#C9A84C"/>
+    <line x1="200" y1="20" x2="320" y2="20" stroke="#52796F" stroke-width="1.2"/>
+    <path d="M128 20 Q134 12, 140 20" fill="#84A98C" opacity="0.7"/>
+    <path d="M180 20 Q186 12, 192 20" fill="#84A98C" opacity="0.7"/>
+  </svg>
+</div>
+
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
+  <div class="section-head">
+    <p class="section-eyebrow">Browse by Collection</p>
+    <h2 class="section-title">Our Three Pillars of Wellness</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="cat-grid">
+    <div class="cat-card cat-green" onclick="filterProducts('green-nature')">
+      <img class="cat-card-img" src="media/category-green-nature.jpg" alt="Green Nature">
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-content">
+        <div class="cat-card-name">Green Nature</div>
+        <div class="cat-card-count">5 products</div>
+      </div>
+    </div>
+    <div class="cat-card cat-jigsimur" onclick="filterProducts('jigsimur')">
+      <img class="cat-card-img" src="media/category-jigsimur.jpg" alt="jigsimur">
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-content">
+        <div class="cat-card-name">jigsimur</div>
+        <div class="cat-card-count">1 products</div>
+      </div>
+    </div>
+    <div class="cat-card cat-jinja" onclick="filterProducts('jinja')">
+      <img class="cat-card-img" src="media/category-jinja.jpg" alt="jinja">
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-content">
+        <div class="cat-card-name">jinja</div>
+        <div class="cat-card-count">2 products</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+  <div class="section-head">
+    <p class="section-eyebrow">Our Products</p>
+    <h2 class="section-title">Nature's Finest Selections</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="cat-filter">
+    <button class="filter-btn active" onclick="filterProducts('all', this)">All Products</button>
+    <button class="filter-btn" onclick="filterProducts('green-nature', this)">Green Nature</button>
+    <button class="filter-btn" onclick="filterProducts('jigsimur', this)">jigsimur</button>
+    <button class="filter-btn" onclick="filterProducts('jinja', this)">jinja</button>
+  </div>
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-head">
+    <p class="section-eyebrow">What Our Customers Say</p>
+    <h2 class="section-title">Real Stories, Real Healing</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">I started using the Moringa Leaf Powder three months ago and my energy levels have completely transformed. I wake up feeling refreshed and my digestion has improved so much.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div>
+          <div class="testi-name">Amaka Okonkwo</div>
+          <div class="testi-role">Lagos, Nigeria</div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">The jinja & Turmeric blend is absolutely amazing for my joint pain. I've been recommending Joyful Herbal Care to everyone in my family. Fast delivery too!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">C</div>
+        <div>
+          <div class="testi-name">Chukwuemeka Dike</div>
+          <div class="testi-role">Abuja, Nigeria</div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">jigsimur Immune Booster helped me recover so fast during the rainy season. I bought 3 bottles at once and saved money. This brand is genuine and trustworthy!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">F</div>
+        <div>
+          <div class="testi-name">Fatima Bello</div>
+          <div class="testi-role">Kano, Nigeria</div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">I was skeptical at first but the Bitter Leaf Detox changed my mind completely. My skin is glowing and I feel lighter. I've been a loyal customer for 8 months now.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">T</div>
+        <div>
+          <div class="testi-name">Taiwo Adeyemi</div>
+          <div class="testi-role">Ibadan, Nigeria</div>
+          <div class="testi-stars">★★★★☆</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="section-head">
+      <p class="section-eyebrow">Get in Touch</p>
+      <h2 class="section-title">We'd love to hear from you</h2>
+      <div class="section-line"></div>
+      <p style="margin-top:14px; color:var(--text-mid); font-size:0.9rem; line-height:1.7;">Have questions about our products or need help with your order? Reach out through any of the channels below and we'll respond promptly.</p>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg width="22" height="22" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12 19.79 19.79 0 011 3.18 2 2 0 012.97 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="contact-label">WhatsApp / Call</div>
+        <div class="contact-val"><a href="tel:+2348022725146">+234 802 272 5146</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg width="22" height="22" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="contact-label">Email</div>
+        <div class="contact-val"><a href="mailto:hello@joyfulherbalcare.com">hello@joyfulherbalcare.com</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg width="22" height="22" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="contact-label">Location</div>
+        <div class="contact-val">Abuja, Nigeria</div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg width="22" height="22" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="contact-label">Business Hours</div>
+        <div class="contact-val">Mon–Sat · 8am – 6pm</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Joyful Herbal Care</div>
+  <p>Bringing nature's healing power to your doorstep since 2020.</p>
+  <div class="footer-links">
+    <a href="#">Home</a><a href="#categories">Categories</a>
+    <a href="#products">Products</a><a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p>© 2025 Joyful Herbal Care. All rights reserved. | Made with love in Nigeria</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox">
+  <div class="lightbox-inner">
+    <button class="lb-close" id="lbClose">✕</button>
+    <button class="lb-arrow prev" id="lbPrev">&#8249;</button>
+    <div class="lightbox-media" id="lbMedia"></div>
+    <button class="lb-arrow next" id="lbNext">&#8250;</button>
+    <p class="lightbox-caption" id="lbCaption"></p>
+    <p class="lightbox-counter" id="lbCounter"></p>
+    <div class="lb-dots" id="lbDots"></div>
+  </div>
+</div>
+
+<!-- DESCRIPTION MODAL -->
+<div class="modal-overlay" id="descModal">
+  <div class="modal-box">
+    <button class="modal-close" id="descModalClose">✕</button>
+    <h3 class="modal-title" id="descModalTitle"></h3>
+    <div class="modal-body" id="descModalBody"></div>
+  </div>
+</div>
+
+<!-- CART POPUP -->
+<div class="cart-popup-overlay" id="cartPopup">
+  <div class="cart-panel">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cartClose">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItemsList"></div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total-row">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-val" id="cartTotalVal">₦0</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Checkout via WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- FAVOURITES POPUP -->
+<div class="cart-popup-overlay" id="favPopup">
+  <div class="cart-panel">
+    <div class="cart-header">
+      <h3>Your Favourites</h3>
+      <button class="cart-close" id="favClose">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="favItemsList"></div>
+    <div class="cart-footer" id="favFooter" style="display:none">
+      <button class="checkout-btn" id="favAddAllBtn" style="background:var(--sage);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        Add All to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="product.js"></script>
+<script>
+// ─────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────
+let cart = JSON.parse(localStorage.getItem('jhc_cart') || '[]');
+let favs = JSON.parse(localStorage.getItem('jhc_favs') || '[]');
+let lbMediaList = [], lbIdx = 0;
+
+// ─────────────────────────────────────────────
+// HERO SLIDER
+// ─────────────────────────────────────────────
+let heroIdx = 0;
+const slidesWrapper = document.getElementById('slidesWrapper');
+const dotsContainer = document.getElementById('heroDots');
+const totalSlides = 3;
+
+function goSlide(n) {
+  heroIdx = (n + totalSlides) % totalSlides;
+  slidesWrapper.style.transform = `translateX(-${heroIdx * 100}%)`;
+  document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === heroIdx));
+}
+for (let i = 0; i < totalSlides; i++) {
+  const d = document.createElement('button');
+  d.className = 'dot' + (i === 0 ? ' active' : '');
+  d.onclick = () => goSlide(i);
+  dotsContainer.appendChild(d);
+}
+document.getElementById('heroPrev').onclick = () => goSlide(heroIdx - 1);
+document.getElementById('heroNext').onclick = () => goSlide(heroIdx + 1);
+let heroTimer = setInterval(() => goSlide(heroIdx + 1), 4500);
+slidesWrapper.addEventListener('mouseenter', () => clearInterval(heroTimer));
+slidesWrapper.addEventListener('mouseleave', () => { heroTimer = setInterval(() => goSlide(heroIdx + 1), 4500); });
+
+// ─────────────────────────────────────────────
+// LIGHTBOX
+// ─────────────────────────────────────────────
+function openLightbox(mediaList, startIdx) {
+  lbMediaList = mediaList; lbIdx = startIdx;
+  document.getElementById('lightbox').classList.add('open');
+  renderLightbox();
+}
+function renderLightbox() {
+  const m = lbMediaList[lbIdx];
+  const mediaEl = document.getElementById('lbMedia');
+  mediaEl.innerHTML = `<img src="${m.src}" alt="${m.caption || ''}" style="width:100%;max-height:72vh;object-fit:contain;border-radius:12px;display:block;">`;
+  document.getElementById('lbCaption').textContent = m.caption || '';
+  document.getElementById('lbCounter').textContent = `${lbIdx + 1} / ${lbMediaList.length}`;
+  const dotsEl = document.getElementById('lbDots');
+  dotsEl.innerHTML = '';
+  lbMediaList.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'lb-dot' + (i === lbIdx ? ' active' : '');
+    d.onclick = () => { lbIdx = i; renderLightbox(); };
+    dotsEl.appendChild(d);
+  });
+}
+document.getElementById('lbPrev').onclick = () => { lbIdx = (lbIdx - 1 + lbMediaList.length) % lbMediaList.length; renderLightbox(); };
+document.getElementById('lbNext').onclick = () => { lbIdx = (lbIdx + 1) % lbMediaList.length; renderLightbox(); };
+document.getElementById('lbClose').onclick = () => document.getElementById('lightbox').classList.remove('open');
+document.getElementById('lightbox').addEventListener('click', function(e) { if (e.target === this) this.classList.remove('open'); });
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'ArrowLeft') { lbIdx = (lbIdx - 1 + lbMediaList.length) % lbMediaList.length; renderLightbox(); }
+  if (e.key === 'ArrowRight') { lbIdx = (lbIdx + 1) % lbMediaList.length; renderLightbox(); }
+  if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('open');
+});
+
+// ─────────────────────────────────────────────
+// DESCRIPTION MODAL
+// ─────────────────────────────────────────────
+function openDescModal(name, desc) {
+  document.getElementById('descModalTitle').textContent = name;
+  document.getElementById('descModalBody').textContent = desc;
+  document.getElementById('descModal').classList.add('open');
+}
+document.getElementById('descModalClose').onclick = () => document.getElementById('descModal').classList.remove('open');
+document.getElementById('descModal').addEventListener('click', function(e) { if (e.target === this) this.classList.remove('open'); });
+
+// ─────────────────────────────────────────────
+// TOAST
+// ─────────────────────────────────────────────
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+// ─────────────────────────────────────────────
+// CART
+// ─────────────────────────────────────────────
+function saveCart() { localStorage.setItem('jhc_cart', JSON.stringify(cart)); }
+function saveFavs() { localStorage.setItem('jhc_favs', JSON.stringify(favs)); }
+
+function addToCart(productId) {
+  const existing = cart.find(i => i.id === productId);
+  if (existing) { existing.qty++; } else { cart.push({ id: productId, qty: 1 }); }
+  saveCart(); updateBadges(); renderCartPanel();
+  const btn = document.querySelector(`[data-cart-id="${productId}"]`);
+  if (btn) {
+    btn.classList.add('added'); btn.textContent = '✓ Added';
+    setTimeout(() => {
+      btn.classList.remove('added');
+      btn.innerHTML = `<svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg> Add to Cart`;
+    }, 1400);
+  }
+  showToast('Added to cart');
+}
+
+function toggleFav(productId) {
+  if (favs.includes(productId)) {
+    favs = favs.filter(i => i !== productId);
+    showToast('Removed from favourites');
+  } else {
+    favs.push(productId);
+    showToast('Added to favourites');
+  }
+  saveFavs(); updateBadges();
+  // Update all fav buttons for this product
+  document.querySelectorAll(`[data-fav-id="${productId}"]`).forEach(btn => {
+    const isNowFav = favs.includes(productId);
+    btn.classList.toggle('active', isNowFav);
+    btn.querySelector('svg').setAttribute('fill', isNowFav ? 'white' : 'none');
+    btn.querySelector('svg').setAttribute('stroke', isNowFav ? 'white' : '#e74c3c');
+  });
+  // Refresh fav panel if open
+  if (document.getElementById('favPopup').classList.contains('open')) renderFavPanel();
+}
+
+function updateBadges() {
+  const cartCount = cart.reduce((s, i) => s + i.qty, 0);
+  const favCount = favs.length;
+  const cb = document.getElementById('cartBadge');
+  const fb = document.getElementById('favBadge');
+  cb.textContent = cartCount; cb.style.display = cartCount > 0 ? 'flex' : 'none';
+  fb.textContent = favCount; fb.style.display = favCount > 0 ? 'flex' : 'none';
+}
+
+function getEffectivePrice(product, qty) {
+  if (product.bulkPrice && qty >= product.bulkQty) return product.bulkPrice;
+  return product.price;
+}
+
+function renderCartPanel() {
+  const listEl = document.getElementById('cartItemsList');
+  const footerEl = document.getElementById('cartFooter');
+  if (cart.length === 0) {
+    listEl.innerHTML = `<div class="cart-empty"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg><p>Your cart is empty.<br>Add some herbal goodness!</p></div>`;
+    footerEl.style.display = 'none'; return;
+  }
+  footerEl.style.display = 'block';
+  let total = 0;
+  listEl.innerHTML = cart.map(item => {
+    const p = PRODUCTS.find(pr => pr.id === item.id);
+    if (!p) return '';
+    const ep = getEffectivePrice(p, item.qty);
+    const lineTotal = ep * item.qty;
+    total += lineTotal;
+    const hasBulk = p.bulkQty && item.qty >= p.bulkQty;
+    const cartImg = p.media && p.media.length > 0 ? `<img src="${p.media[0].src}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">` : '';
+    return `
+      <div class="cart-item">
+        <div class="cart-item-icon">
+          ${cartImg}
+        </div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${p.name}</div>
+          <div class="cart-item-price">₦${ep.toLocaleString()} each · ₦${lineTotal.toLocaleString()} total</div>
+          ${hasBulk ? `<div class="cart-discount-note">Bulk price applied!</div>` : (p.bulkPrice && item.qty < p.bulkQty ? `<div class="cart-discount-note" style="color:var(--sage)">Add ${p.bulkQty - item.qty} more for bulk discount (₦${p.bulkPrice.toLocaleString()}/ea)</div>` : '')}
+          <div class="cart-qty">
+            <button class="qty-btn" onclick="changeQty('${p.id}',-1)">−</button>
+            <span class="qty-val">${item.qty}</span>
+            <button class="qty-btn" onclick="changeQty('${p.id}',1)">+</button>
+          </div>
+        </div>
+        <button class="remove-item-btn" onclick="removeFromCart('${p.id}')" title="Remove">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+        </button>
+      </div>`;
+  }).join('');
+  document.getElementById('cartTotalVal').textContent = '₦' + total.toLocaleString();
+}
+
+function changeQty(id, delta) {
+  const item = cart.find(i => i.id === id);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) { cart = cart.filter(i => i.id !== id); }
+  saveCart(); updateBadges(); renderCartPanel();
+}
+function removeFromCart(id) {
+  cart = cart.filter(i => i.id !== id);
+  saveCart(); updateBadges(); renderCartPanel();
+  showToast('Item removed from cart');
+}
+
+// Cart popup open/close
+document.getElementById('cartIconBtn').onclick = () => { renderCartPanel(); document.getElementById('cartPopup').classList.add('open'); };
+document.getElementById('cartClose').onclick = () => document.getElementById('cartPopup').classList.remove('open');
+document.getElementById('cartPopup').addEventListener('click', function(e) { if (e.target === this) this.classList.remove('open'); });
+
+// ─────────────────────────────────────────────
+// FAVOURITES PANEL
+// ─────────────────────────────────────────────
+function renderFavPanel() {
+  const listEl = document.getElementById('favItemsList');
+  const footerEl = document.getElementById('favFooter');
+  if (favs.length === 0) {
+    listEl.innerHTML = `<div class="cart-empty"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg><p>No favourites yet.<br>Tap the heart on any product!</p></div>`;
+    footerEl.style.display = 'none'; return;
+  }
+  footerEl.style.display = 'block';
+  listEl.innerHTML = favs.map(id => {
+    const p = PRODUCTS.find(pr => pr.id === id);
+    if (!p) return '';
+    const favImg = p.media && p.media.length > 0 ? `<img src="${p.media[0].src}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">` : '';
+    return `
+      <div class="cart-item">
+        <div class="cart-item-icon">
+          ${favImg}
+        </div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${p.name}</div>
+          <div class="cart-item-price">₦${p.price.toLocaleString()}${p.bulkPrice ? ` · ₦${p.bulkPrice.toLocaleString()} for ${p.bulkQty}+` : ''}</div>
+          <div class="cart-qty" style="margin-top:8px;">
+            <button class="qty-btn" style="background:var(--forest);color:white;font-size:0.75rem;width:auto;padding:0 10px;border-radius:6px;" onclick="addToCart('${p.id}'); showToast('${p.name.replace(/'/g,"\\'")} added to cart');">
+              + Add to Cart
+            </button>
+          </div>
+        </div>
+        <button class="remove-item-btn" onclick="toggleFav('${p.id}')" title="Remove from favourites">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#e74c3c" stroke="#e74c3c" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>`;
+  }).join('');
+}
+
+// Add all favourites to cart
+document.getElementById('favAddAllBtn').onclick = () => {
+  favs.forEach(id => {
+    const existing = cart.find(i => i.id === id);
+    if (existing) { existing.qty++; } else { cart.push({ id, qty: 1 }); }
+  });
+  saveCart(); updateBadges(); renderCartPanel();
+  showToast('All favourites added to cart!');
+};
+
+// Fav popup open/close
+document.getElementById('favIconBtn').onclick = () => { renderFavPanel(); document.getElementById('favPopup').classList.add('open'); };
+document.getElementById('favClose').onclick = () => document.getElementById('favPopup').classList.remove('open');
+document.getElementById('favPopup').addEventListener('click', function(e) { if (e.target === this) this.classList.remove('open'); });
+
+// ─────────────────────────────────────────────
+// WHATSAPP CHECKOUT
+// ─────────────────────────────────────────────
+document.getElementById('checkoutBtn').onclick = () => {
+  if (cart.length === 0) return;
+  const lines = cart.map(item => {
+    const p = PRODUCTS.find(pr => pr.id === item.id);
+    if (!p) return '';
+    const ep = getEffectivePrice(p, item.qty);
+    return `• ${p.name} x${item.qty} @ ₦${ep.toLocaleString()}/ea = ₦${(ep * item.qty).toLocaleString()}`;
+  }).filter(Boolean);
+  const total = cart.reduce((s, item) => {
+    const p = PRODUCTS.find(pr => pr.id === item.id);
+    return p ? s + getEffectivePrice(p, item.qty) * item.qty : s;
+  }, 0);
+  const msg = `Hello Joyful Herbal Care! I would like to place an order:\n\n${lines.join('\n')}\n\nTotal: ₦${total.toLocaleString()}\n\nPlease confirm availability and delivery details. Thank you!`;
+  const encoded = encodeURIComponent(msg);
+  window.open(`https://wa.me/2348022725146?text=${encoded}`, '_blank');
+};
+
+// ─────────────────────────────────────────────
+// RENDER PRODUCTS
+// ─────────────────────────────────────────────
+let currentFilter = 'all';
+
+function renderProducts(filter) {
+  currentFilter = filter;
+  const grid = document.getElementById('productsGrid');
+  const filtered = filter === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
+  grid.innerHTML = filtered.map(p => {
+    const isFav = favs.includes(p.id);
+    const tagClass = { 'green-nature': 'tag-green', 'jigsimur': 'tag-jigsimur', 'jinja': 'tag-jinja' }[p.category];
+    const tagLabel = { 'green-nature': 'Green Nature', 'jigsimur': 'jigsimur', 'jinja': 'jinja' }[p.category];
+    const hasMore = p.description.length > 120;
+    const hasMedia = p.media && p.media.length > 0;
+    const hasMultiple = hasMedia && p.media.length > 1;
+    const mediaJson = hasMedia ? JSON.stringify(p.media).replace(/"/g, '&quot;') : '[]';
+    const firstImg = hasMedia ? p.media[0].src : '';
+    return `
+      <div class="product-card" data-cat="${p.category}">
+        <div class="product-media"${hasMedia ? ` onclick="openLightbox(${mediaJson}, 0)"` : ''}>
+          ${hasMedia
+            ? `<img class="product-media-img" src="${firstImg}" alt="${p.name}">`
+            : `<div class="product-media-img product-media-placeholder"></div>`}
+          <span class="cat-tag ${tagClass}">${tagLabel}</span>
+          ${hasMultiple ? `<span class="media-count-badge"><svg width="11" height="11" fill="white" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="white" stroke-width="2"/><path d="M3 9h18" stroke="white" stroke-width="1.5"/></svg>${p.media.length} photos</span>` : ''}
+          <button class="fav-btn ${isFav ? 'active' : ''}" data-fav-id="${p.id}" onclick="event.stopPropagation(); toggleFav('${p.id}')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="${isFav ? 'white' : 'none'}" stroke="${isFav ? 'white' : '#e74c3c'}" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-info">
+          <div class="product-name">${p.name}</div>
+          <div class="product-price-row">
+            <span class="price-main">₦${p.price.toLocaleString()}</span>
+            ${p.bulkPrice ? `<span class="price-badge">${p.bulkQty}+ = ₦${p.bulkPrice.toLocaleString()}</span>` : ''}
+          </div>
+          ${p.bulkPrice ? `<div class="bulk-note">Buy <strong>${p.bulkQty}+</strong> and pay <strong>₦${p.bulkPrice.toLocaleString()}</strong> each</div>` : ''}
+          <div class="product-desc">${p.shortDesc}${hasMore ? ` <button class="see-more-btn" onclick="openDescModal('${p.name.replace(/'/g,'\\\'').replace(/"/g,'&quot;')}', '${p.description.replace(/'/g,'\\\'').replace(/\n/g,' ')}')">See more</button>` : ''}</div>
+          <div class="product-actions">
+            <button class="add-cart-btn" data-cart-id="${p.id}" onclick="addToCart('${p.id}')">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function filterProducts(cat, btn) {
+  renderProducts(cat);
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  if (cat !== 'all') {
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// ─────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────
+renderProducts('all');
+updateBadges();
+</script>
+</body>
+</html>
