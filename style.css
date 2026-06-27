@@ -89,7 +89,7 @@
   .slide-2 .slide-eyebrow { color: var(--sage); }
   .slide-2 .slide-title, .slide-2 .slide-desc { color: var(--forest); }
   .slide-2 .btn-primary { background: var(--forest); color: var(--white); }
-  .slide-3 .slide-bg { display: none; } /* override base — handled per breakpoint */
+  .slide-3 .slide-bg { display: none; }
   .slide-3 .slide-overlay { display: none; }
 
   /* ── SLIDE 3: LARGE SCREEN – split layout ── */
@@ -99,8 +99,6 @@
     display: flex;
     align-items: stretch;
   }
-  .slide-3-bg-mobile { display: none; }
-  .slide-3-overlay-mobile { display: none; }
 
   .slide-3-text {
     flex: 1;
@@ -134,21 +132,29 @@
     max-height: 100%;
   }
 
-  /* ── SLIDE 3: SMALL SCREEN – full bg image only, no text, no overlay ── */
+  /* ── SLIDE 3: SMALL SCREEN – image panel fills entire slide, text hidden ── */
   @media (max-width: 768px) {
     .slide-3 {
-      display: block;
+      display: flex;
       position: relative;
+      padding: 0;
     }
-    .slide-3-bg-mobile {
-      display: block;
-      position: absolute; inset: 0; z-index: 0;
-      background-size: cover;
-      background-position: center;
-      /* No overlay — show the image fully and cleanly */
-    }
+    /* Hide text completely on mobile */
     .slide-3-text { display: none; }
-    .slide-3-image-panel { display: none; }
+    /* Image panel becomes the full slide */
+    .slide-3-image-panel {
+      flex: 1 1 100%;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+    }
+    .slide-3-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
   /* Slide hero illustrations */
