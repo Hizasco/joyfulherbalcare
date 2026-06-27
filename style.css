@@ -134,7 +134,7 @@
     max-height: 100%;
   }
 
-  /* ── SLIDE 3: SMALL SCREEN – full bg image, hide text ── */
+  /* ── SLIDE 3: SMALL SCREEN – full bg image only, no text, no overlay ── */
   @media (max-width: 768px) {
     .slide-3 {
       display: block;
@@ -145,11 +145,7 @@
       position: absolute; inset: 0; z-index: 0;
       background-size: cover;
       background-position: center;
-    }
-    .slide-3-overlay-mobile {
-      display: block;
-      position: absolute; inset: 0; z-index: 1;
-      background: rgba(0,0,0,0.35);
+      /* No overlay — show the image fully and cleanly */
     }
     .slide-3-text { display: none; }
     .slide-3-image-panel { display: none; }
@@ -514,4 +510,133 @@
     width: 16px; height: 16px;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e74c3c' stroke='%23e74c3c' stroke-width='2'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z'/%3E%3C/svg%3E") center/contain no-repeat;
     margin-right: 8px; vertical-align: middle;
+  }
+  /* ── FOOTER DEV LINK ── */
+  .footer-dev-link {
+    color: var(--gold-light);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(201,168,76,0.4);
+    transition: color .2s, border-color .2s;
+  }
+  .footer-dev-link:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  /* ── PARTNER / REGISTER SECTION ── */
+  .partner-section {
+    padding: 90px 40px;
+    background: linear-gradient(135deg, #0d2b1c 0%, #1B4332 50%, #2D6A4F 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .partner-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .partner-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; z-index: 1;
+  }
+  .partner-badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--gold-light);
+    font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 6px 18px; border-radius: 50px;
+    margin-bottom: 22px;
+  }
+  .partner-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+  .partner-subtitle {
+    font-size: 1rem; color: rgba(255,255,255,0.75);
+    line-height: 1.75; max-width: 620px;
+    margin: 0 auto 56px;
+  }
+  .partner-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 24px;
+    margin-bottom: 56px;
+    text-align: left;
+  }
+  .partner-benefit {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: background .25s, transform .25s;
+  }
+  .partner-benefit:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-4px);
+  }
+  .partner-benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 14px;
+    line-height: 1;
+  }
+  .partner-benefit-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .partner-benefit-desc {
+    font-size: 0.84rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+  }
+  .partner-cta-box {
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 20px;
+    padding: 40px 36px;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .partner-cta-text {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.75;
+    margin-bottom: 28px;
+  }
+  .partner-cta-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25D366; color: white;
+    padding: 15px 34px; border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 28px rgba(37,211,102,0.35);
+    transition: transform .2s, box-shadow .2s, background .2s;
+  }
+  .partner-cta-btn:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 36px rgba(37,211,102,0.45);
+  }
+  .partner-cta-btn:active { transform: scale(0.97); }
+
+  /* ── MODAL BODY PARAGRAPHS ── */
+  .modal-body p { margin-bottom: 14px; }
+  .modal-body p:last-child { margin-bottom: 0; }
+
+  /* ── PARTNER SECTION RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .partner-section { padding: 60px 16px; }
+    .partner-cta-box { padding: 28px 20px; }
+    .partner-benefits { grid-template-columns: 1fr; }
   }

@@ -65,23 +65,41 @@ Suggested Use: Adults: Take as directed on the product label or as recommended b
     media: [
       { type: 'image', src: 'media/green-nature-soursop-1.jpg', caption: 'Soursop Leaf Tea – 20 biodegradable bags' },
     ],
-    description: `[DESCRIPTION NEEDED] – Please provide the correct description for this product.`,
-    shortDesc: '[SHORT DESCRIPTION NEEDED] – Please provide the correct short description.',
+    description: `Greenature Aloe Vera Soap – Natural Herbal Skincare Soap. Experience the refreshing care of nature with Greenature Aloe Vera Soap, a premium herbal soap enriched with the nourishing properties of Aloe Vera. Carefully formulated to gently cleanse, moisturize, and refresh the skin, this soap is suitable for daily use and all skin types.
+
+Made with high-quality natural ingredients, Greenature Aloe Vera Soap is known for its soothing and hydrating properties. It helps remove dirt, excess oil, and impurities while leaving the skin feeling soft, smooth, and revitalized. Its gentle formula supports healthy-looking skin and promotes a fresh, clean feeling after every wash.
+
+Key Features: 🌿 Enriched with Natural Aloe Vera 💧 Helps Moisturize and Hydrate the Skin 🧼 Gently Cleanses Without Over-Drying ✨ Leaves Skin Soft and Smooth 🌱 Suitable for Daily Use 🌸 Refreshes and Revitalizes the Skin ✅ Suitable for All Skin Types.
+
+Ingredients: Greenature Aloe Vera Soap contains Aloe Vera extract, moisturizing agents, natural plant-based ingredients, cleansing agents, and carefully selected skin-conditioning ingredients.
+
+Suggested Use: Wet the skin with water, lather the soap thoroughly, gently massage onto the face or body, then rinse with clean water. Suitable for everyday use.
+`,
+    shortDesc: 'Greenature Aloe Vera Soap – Natural Herbal Skincare Soap. Experience the refreshing care of nature with Greenature Aloe Vera Soap.',
   },
   {
     // ⚠️ NEEDS CORRECT DESCRIPTION – previous description contained fabricated/fictional details.
-    id: 'p9', category: 'jigsimur', name: 'jigsimur Skin Glow Drops',
+    id: 'p5', category: 'jigsimur', name: 'jigsimur Skin Glow Drops',
     price: 6000, bulkPrice: 5200, bulkQty: 2,
     media: [
       { type: 'image', src: 'media/jigsimur-1.jpg', caption: 'jigsimur Skin Glow Drops – 30ml concentrate' },
       { type: 'image', src: 'media/jigsimur-2.jpg', caption: 'Apply 3 drops to face morning & evening' },
       { type: 'image', src: 'media/jigsimur-3.jpg', caption: 'Contains rosehip, jojoba and sea buckthorn' },
     ],
-    description: `[DESCRIPTION NEEDED] – Please provide the correct description for jigsimur Skin Glow Drops.`,
-    shortDesc: '[SHORT DESCRIPTION NEEDED] – Please provide the correct short description.',
+    description: `Jigsimur Herbal Drink – Natural Herbal Wellness Supplement. Discover the natural goodness of Jigsimur Herbal Drink, a premium herbal supplement carefully formulated from a blend of traditional herbs and natural plant extracts. Designed to support overall wellness, this herbal drink is ideal for individuals seeking a natural addition to a healthy lifestyle.
+
+Made with high-quality herbal ingredients, Jigsimur Herbal Drink is widely recognized for its refreshing herbal formula and is commonly used to support healthy digestion, natural detoxification, immune function, and overall body vitality. Its carefully selected herbal blend helps promote everyday wellness while complementing a balanced diet and active lifestyle.
+
+Key Features: 🌿 Premium Herbal Formula 💪 Supports General Wellness 🍃 Supports Natural Detoxification 🛡️ Supports Immune Health ❤️ Promotes Healthy Digestion 🌱 Rich in Natural Plant Extracts ⚡ Helps Maintain Energy and Vitality ✅ Suitable for Daily Wellness Support.
+
+Ingredients: Jigsimur Herbal Drink contains a proprietary blend of natural herbs and plant extracts, including carefully selected traditional herbal ingredients known for supporting digestive health, antioxidant protection, and overall wellness.
+
+Suggested Use: Adults: Take the recommended amount as indicated on the product label or as advised by a qualified healthcare professional. Shake well before use.
+`,
+    shortDesc: 'igsimur Herbal Drink – Natural Herbal Wellness Supplement..',
   },
   {
-    id: 'p10', category: 'jinja', name: 'jinja herbal extract 750ml',
+    id: 'p6', category: 'jinja', name: 'jinja herbal extract 750ml',
     price: 15000, bulkPrice: 14000, bulkQty: 2,  // ✅ FIXED: bulk was ₦27,000 (higher than single price!)
     media: [
       { type: 'image', src: 'media/jinja-picture-1.jpg', caption: 'your future will thank you' },
@@ -100,7 +118,7 @@ Suggested Use: Adults: Take 20–30 ml, three times daily, or as directed by a q
     shortDesc: 'Jinja Herbal Extract – Natural Herbal Wellness Supplement. Experience the power of nature with Jinja Herbal Extract.',
   },
   {
-    id: 'p11', category: 'jinja', name: 'jinja herbal extract 450ml',
+    id: 'p7', category: 'jinja', name: 'jinja herbal extract 450ml',
     price: 7000, bulkPrice: 6500, bulkQty: 2,  // ✅ FIXED: bulk was ₦13,000 (higher than single price!)
     media: [
       { type: 'image', src: 'media/jinja-picture-1.jpg', caption: 'your future will thank you' },
