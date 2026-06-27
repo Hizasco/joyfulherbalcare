@@ -89,25 +89,18 @@
   .slide-2 .slide-eyebrow { color: var(--sage); }
   .slide-2 .slide-title, .slide-2 .slide-desc { color: var(--forest); }
   .slide-2 .btn-primary { background: var(--forest); color: var(--white); }
-  /* slide-3 overrides the base .slide-bg and .slide-overlay — not needed here */
-  .slide-3 .slide-bg { display: none; }
+  .slide-3 .slide-bg { display: none; } /* override base — handled per breakpoint */
   .slide-3 .slide-overlay { display: none; }
 
-  /* ── SLIDE 3: DESKTOP – left text, right image ── */
+  /* ── SLIDE 3: LARGE SCREEN – split layout ── */
   .slide-3 {
     padding: 0;
     background: linear-gradient(135deg, #1a3a28 0%, #2d5a40 100%);
     display: flex;
     align-items: stretch;
   }
-
-  /* Mobile bg div: hidden on desktop, shown on mobile via media query */
-  .slide-3-bg-mobile {
-    display: none;
-    position: absolute; inset: 0; z-index: 0;
-    background-size: cover;
-    background-position: center;
-  }
+  .slide-3-bg-mobile { display: none; }
+  .slide-3-overlay-mobile { display: none; }
 
   .slide-3-text {
     flex: 1;
@@ -130,26 +123,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: transparent;
   }
   .slide-3-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center;
+    object-position: center right;
     display: block;
+    max-height: 100%;
   }
 
-  /* ── SLIDE 3: MOBILE – image fills entire slide, text & desktop panel hidden ── */
+  /* ── SLIDE 3: SMALL SCREEN – full bg image only, no text, no overlay ── */
   @media (max-width: 768px) {
     .slide-3 {
-      position: relative;
       display: block;
+      position: relative;
     }
-    /* Show the bg div as full-bleed image */
     .slide-3-bg-mobile {
       display: block;
+      position: absolute; inset: 0; z-index: 0;
+      background-size: cover;
+      background-position: center;
+      /* No overlay — show the image fully and cleanly */
     }
-    /* Hide text and desktop image panel */
     .slide-3-text { display: none; }
     .slide-3-image-panel { display: none; }
   }
@@ -642,4 +639,70 @@
     .partner-section { padding: 60px 16px; }
     .partner-cta-box { padding: 28px 20px; }
     .partner-benefits { grid-template-columns: 1fr; }
+  }
+  /* ── SLIDE 3 MOBILE CTA BUTTON OVERLAY ── */
+  .slide-3-mobile-cta {
+    display: none; /* hidden on desktop */
+  }
+  @media (max-width: 768px) {
+    .slide-3-mobile-cta {
+      display: flex;
+      position: absolute;
+      bottom: 36px;
+      left: 0; right: 0;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+    .slide-3-cta-btn {
+      background: var(--gold) !important;
+      color: #1a1a1a !important;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+      letter-spacing: 0.02em;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .slide-3-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(0,0,0,0.45);
+    }
+  }
+
+  /* ── SOCIAL MEDIA CARDS ── */
+  .social-cards {
+    margin-top: 28px;
+  }
+  .social-card {
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .social-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.13);
+  }
+  .social-icon {
+    transition: background .25s;
+  }
+  .social-facebook .social-icon { background: #1877F2; }
+  .social-facebook:hover .social-icon { background: #0d5ecc; }
+
+  .social-instagram .social-icon {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  }
+  .social-instagram:hover .social-icon {
+    background: radial-gradient(circle at 30% 107%, #f0e060 0%, #f0e060 5%, #e0403a 45%, #b01888 60%, #1a48d0 90%);
+  }
+
+  .social-tiktok .social-icon { background: #010101; }
+  .social-tiktok:hover .social-icon { background: #333; }
+
+  .social-handle {
+    font-size: 0.8rem;
+    color: var(--sage);
+    font-style: italic;
   }
