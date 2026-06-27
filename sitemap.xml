@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ═══════════════════════════════════════════
+       HOMEPAGE
+       ═══════════════════════════════════════════ -->
+  <url>
+    <loc>https://hizasco.github.io/joyfulherbalcare/</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hizasco.github.io/joyfulherbalcare/media/og-image.jpg</image:loc>
+      <image:title>Joyful Herbal Care – Natural Herbal Supplements Nigeria</image:title>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION ANCHORS (in-page sections Google
+       can discover via the canonical page)
+       ═══════════════════════════════════════════ -->
+  <url>
+    <loc>https://hizasco.github.io/joyfulherbalcare/#categories</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://hizasco.github.io/joyfulherbalcare/#products</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hizasco.github.io/joyfulherbalcare/#register</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hizasco.github.io/joyfulherbalcare/#testimonials</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://hizasco.github.io/joyfulherbalcare/#contact</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════
+       GREEN NATURE PRODUCTS
+       ═══════════════════════════════════════════ -->
+  <url>
+    <loc>https://hizasco.github.io/joyfulherbalcare/#products</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://hizasco.github.io/joyfulherbalcare/media/green-nature-RebootatFS-1.jpg</image:loc>
+      <image:title>Rebootat FS 750ml – Greenature Fever Shield Natural Herbal Supplement</image:title>
+      <image:caption>Rebootat FS 750ml supports immune health, digestion and detoxification</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hizasco.github.io/joyfulherbalcare/media/green-nature-RebootatDD-1.jpg</image:loc>
+      <image:title>Rebootat DD 750ml – Greenature Natural Herbal Detox Supplement</image:title>
+      <image:caption>Rebootat DD 750ml supports liver, kidney and heart health</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hizasco.github.io/joyfulherbalcare/media/green-nature-RebootatCD-1.jpg</image:loc>
+      <image:title>Rebootat CD 750ml – Greenature Natural Herbal Wellness Supplement</image:title>
+      <image:caption>Rebootat CD 750ml supports immune function and overall vitality</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hizasco.github.io/joyfulherbalcare/media/green-nature-soursop-1.jpg</image:loc>
+      <image:title>Aloe Vera Soursop – Green Nature Natural Herbal Supplement</image:title>
+      <image:caption>Aloe Vera Soursop natural herbal wellness supplement</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hizasco.github.io/joyfulherbalcare/media/jinja-picture-1.jpg</image:loc>
+      <image:title>Jinja Herbal Extract 750ml – NAFDAC Registered Natural African Herbs</image:title>
+      <image:caption>Jinja Herbal Extract – your future will thank you</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hizasco.github.io/joyfulherbalcare/media/jinja-small-picture-3.jpg</image:loc>
+      <image:title>Jinja Herbal Extract 450ml – NAFDAC Registered Natural African Herbs</image:title>
+      <image:caption>Jinja Herbal Extract 450ml – clinically tested and approved</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════
+       PRODUCT CATEGORY FILTERS
+       (helps search engines find category pages)
+       ═══════════════════════════════════════════ -->
+  <url>
+    <loc>https://hizasco.github.io/joyfulherbalcare/#products?cat=green-nature</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hizasco.github.io/joyfulherbalcare/media/category-green-nature.jpg</image:loc>
+      <image:title>Green Nature Herbal Supplement Category – Rebootat FS, DD, CD</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://hizasco.github.io/joyfulherbalcare/#products?cat=jinja</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hizasco.github.io/joyfulherbalcare/media/category-jinja.jpg</image:loc>
+      <image:title>Jinja Herbal Extract Category – 750ml and 450ml NAFDAC Registered</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://hizasco.github.io/joyfulherbalcare/#products?cat=jigsimur</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hizasco.github.io/joyfulherbalcare/media/category-jigsimur.jpg</image:loc>
+      <image:title>Jigsimur Herbal Supplement Category – Natural Wellness Nigeria</image:title>
+    </image:image>
+  </url>
+
+</urlset>
