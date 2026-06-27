@@ -89,15 +89,24 @@
   .slide-2 .slide-eyebrow { color: var(--sage); }
   .slide-2 .slide-title, .slide-2 .slide-desc { color: var(--forest); }
   .slide-2 .btn-primary { background: var(--forest); color: var(--white); }
+  /* slide-3 overrides the base .slide-bg and .slide-overlay — not needed here */
   .slide-3 .slide-bg { display: none; }
   .slide-3 .slide-overlay { display: none; }
 
-  /* ── SLIDE 3: LARGE SCREEN – split layout ── */
+  /* ── SLIDE 3: DESKTOP – left text, right image ── */
   .slide-3 {
     padding: 0;
     background: linear-gradient(135deg, #1a3a28 0%, #2d5a40 100%);
     display: flex;
     align-items: stretch;
+  }
+
+  /* Mobile bg div: hidden on desktop, shown on mobile via media query */
+  .slide-3-bg-mobile {
+    display: none;
+    position: absolute; inset: 0; z-index: 0;
+    background-size: cover;
+    background-position: center;
   }
 
   .slide-3-text {
@@ -121,40 +130,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
   }
   .slide-3-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center right;
+    object-position: center;
     display: block;
-    max-height: 100%;
   }
 
-  /* ── SLIDE 3: SMALL SCREEN – image panel fills entire slide, text hidden ── */
+  /* ── SLIDE 3: MOBILE – image fills entire slide, text & desktop panel hidden ── */
   @media (max-width: 768px) {
     .slide-3 {
-      display: flex;
       position: relative;
-      padding: 0;
+      display: block;
     }
-    /* Hide text completely on mobile */
+    /* Show the bg div as full-bleed image */
+    .slide-3-bg-mobile {
+      display: block;
+    }
+    /* Hide text and desktop image panel */
     .slide-3-text { display: none; }
-    /* Image panel becomes the full slide */
-    .slide-3-image-panel {
-      flex: 1 1 100%;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      inset: 0;
-    }
-    .slide-3-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
+    .slide-3-image-panel { display: none; }
   }
 
   /* Slide hero illustrations */
