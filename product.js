@@ -2,41 +2,81 @@
 // PRODUCT DATA
 // ─────────────────────────────────────────────
 const PRODUCTS = [
-  {
+    {
     id: 'p1', category: 'green-nature', name: 'Rebootat FS 750ml',
     price: 15000, bulkPrice: 14000, bulkQty: 2,
     media: [
       { type: 'image', src: 'media/green-nature-RebootatFS-1.jpg', caption: 'SUPPORTS HEALTHY DIGESTION Helps your body break down food easily' },
       { type: 'image', src: 'media/green-nature-RebootatFS-2.jpg', caption: 'PROMOTES GUT BALANCE Supports natural intestinal balance' },
     ],
-    description: `Greenature Rebootar FS (Fever Shield) – Natural Herbal Wellness Supplement. Experience the benefits of nature with Greenature Rebootar FS (Fever Shield), a premium herbal supplement carefully formulated from a blend of natural herbal ingredients. Designed to support overall wellness, this herbal formula is ideal for individuals looking for a natural way to maintain a healthy and active lifestyle.
+    description: `Greenature Rebootar FS (Fever Shield) – Natural Herbal. Experience the benefits of nature, it destroys malaria parasites and typhoid fever in 5 days.
 
-Made with high-quality herbal ingredients, Greenature Rebootar FS is recognized for its antioxidant-rich formula and is commonly used to support the body's natural immune function, digestive wellness, detoxification process, and overall vitality. It is produced from carefully selected natural herbs under strict quality standards.
+ INGREDIENTS
+ Zingiber Offcinale
+Aloe Barbadensis Miller
+Curcuma Longa
+Treated water.
 
-Key Features: 🌿 100% Natural Herbal Formula 💪 Supports General Wellness 🛡️ Supports Immune Health 🍃 Rich in Natural Antioxidants ❤️ Supports Natural Detoxification 🌱 Supports Healthy Digestion ⚡ Helps Maintain Energy and Vitality ✅ Produced Under Quality Standards.
-
-Ingredients: Greenature Rebootar FS contains a carefully selected blend of natural herbal extracts formulated to support general wellness and the body's natural defenses.
-
-Suggested Use: Adults: Take as directed on the product label or as recommended by a qualified healthcare professional.`,
-    shortDesc: 'Greenature Rebootar FS (Fever Shield) – Natural Herbal Wellness Supplement. Experience the benefits of nature.',
+ FUNCTIONS
+✅ Fight malaria
+✅ Diarrhoea solution
+✅ Regulate Cholesterol
+✅ Reduces body pain
+✅ Provides relief for typhoid fever
+✅ Antibacterial properties
+✅ Relieves cold, cough, catarrh symptoms`,
+    shortDesc: 'Greenature Rebootar FS (Fever Shield) – Natural Herbal. Experience the benefits of nature, it destroys malaria parasites and typhoid fever in 5 days.',
   },
   {
     id: 'p2', category: 'green-nature', name: 'Rebootat DD 750ml',
     price: 15000, bulkPrice: 14000, bulkQty: 2,
     media: [
       { type: 'image', src: 'media/green-nature-RebootatDD-1.jpg', caption: 'It Supports liver, kidney and heart health' },
-      { type: 'image', src: 'media/green-nature-RebootatDD-2.jpg', caption: 'Fights infections and Bacteria (including STDs)' },
-      { type: 'image', src: 'media/green-nature-RebootatDD-3.jpg', caption: 'lowers blood sugar level and diabetes' },
+			{ type: 'image', src: 'media/green-nature-RebootatDD-2.jpg', caption: 'Fights infections and Bacteria (including STDs)' },
+      { type: 'image', src: 'media/green-nature-RebootatDD-3.jpg', caption: 'Fights infections and Bacteria (including STDs)' },
+      { type: 'image', src: 'media/green-nature-RebootatDD-4.jpg', caption: 'lowers blood sugar level and diabetes' },
     ],
-    description: `Greenature Rebootar DD – Natural Herbal Wellness Supplement. Experience the power of nature with Greenature Rebootar DD, a premium herbal supplement carefully formulated from a blend of natural herbal ingredients. Designed to support overall wellness, this herbal formula is ideal for individuals seeking a natural addition to their healthy lifestyle.
+    description: `Rebootar Bitters -
+		It Reboots your body systems, Renew body organs and Revitalize dead cells. A potent herbal formula for daily detox and total wellness.
 
-Made with high-quality herbal ingredients, Greenature Rebootar DD is recognized for its antioxidant-rich formula and is commonly used to support the body's natural detoxification process, digestive wellness, immune function, and overall vitality. Produced from carefully selected natural herbs under strict quality standards, Rebootar DD is formulated to help maintain everyday wellness and healthy body function.
+ Ingredients
 
-Key Features: 🌿 100% Natural Herbal Formula 💪 Supports General Wellness 🍃 Supports Natural Detoxification 🛡️ Supports Immune Health ❤️ Supports Liver and Kidney Wellness 🌱 Supports Healthy Digestion ⚡ Helps Maintain Energy and Vitality ✅ Produced Under Quality Standards.
+Citrus Aurantifolia
+Medicago Sativa
+Arctium Lappa
+Citrus Lanatus
+Gingko
+Orthosiphon.
+Bacopa Monnieri
+Withania Somnifera
+Treated water.
 
-Ingredients: Greenature Rebootar DD contains a carefully selected blend of natural herbal extracts formulated to support the body's natural cleansing process, digestive health, and overall wellness.
-
-Suggested Use: Adults: Take as directed on the product label or as recommended by a qualified healthcare professional.`,
+ Functions
+ it detoxifies, renews and rejuvenates your body organs and also defends your body from sickness and diseases.
+ Benefits
+✅ Natural Detoxifier
+✅ Boost Immune System
+✅ Rich in Antioxidants
+✅ Promotes Kidney and Liver Health
+✅ Fights; bacteria,fungi,viral , parasite disease & stds
+✅ Regulates Cholesterol
+✅ Normalizes Blood Pressure
+✅ Stabilize Blood Sugar Level
+✅ Fights Cancer
+✅ Helps with Weight Loss
+✅ Aids Digestion
+✅ Fights Inflamation
+✅ Boost Male and Female Fertility
+✅ Arthrites Relief
+✅ Helps Cough
+✅ Eases Asthma and Allergies
+✅ Improves Vision
+✅ deals with ulcer
+✅ Hepatoprotective
+✅ Good for the treatment of Pile
+✅ Helps in the treatment of Stroke.
+✅ Help in the treatment of Fibroids
+✅ Help in Cleaning our system from Toxins-`,
     shortDesc: 'It Reboots your body systems, Renew body organs and Revitalize dead cells. A potent herbal formula for daily detox and total wellness.',
   },
   {
@@ -44,18 +84,27 @@ Suggested Use: Adults: Take as directed on the product label or as recommended b
     price: 15000, bulkPrice: 14000, bulkQty: 2,
     media: [
       { type: 'image', src: 'media/green-nature-RebootatCD-1.jpg', caption: 'Rebootat CD 750ml – Natural Herbal Wellness Supplement' },
-      { type: 'image', src: 'media/green-nature-RebootatCD-2.jpg', caption: 'Supports immune function and overall vitality' },
+			{ type: 'image', src: 'media/green-nature-RebootatCD-2.jpg', caption: 'Rebootat CD 750ml – Natural Herbal Wellness Supplement' },
+      { type: 'image', src: 'media/green-nature-RebootatCD-3.jpg', caption: 'Supports immune function and overall vitality' },
     ],
-    description: `Greenature Rebootar CD – Natural Herbal Wellness Supplement. Experience the benefits of nature with Greenature Rebootar CD, a premium herbal supplement carefully formulated from a blend of natural herbal ingredients. Designed to support overall wellness, this herbal formula is ideal for individuals seeking a natural way to maintain a healthy and active lifestyle.
+    description: `💓  REBOOTAR CARDIO — Greenature’s breakthrough formula for Cardiovascular & Blood Health.
 
-Made with high-quality herbal ingredients, Greenature Rebootar CD is recognized for its antioxidant-rich formula and is commonly used to support the body's natural immune function, digestive wellness, and overall vitality. Produced from carefully selected natural herbs under strict quality standards, Rebootar CD is formulated to complement a balanced diet and healthy lifestyle.
+ INGREDIENTS
+ Justicia Xamea
+Salvia Miltiorrhiza
+Amomum Testaceum
+Treated water.
 
-Key Features: 🌿 100% Natural Herbal Formula 💪 Supports General Wellness 🛡️ Supports Immune Health ❤️ Rich in Natural Antioxidants 🌱 Supports Healthy Digestion ⚡ Helps Maintain Energy and Vitality 🍃 Supports Overall Body Wellness ✅ Produced Under Quality Standards.
+ FUNCTIONS
+It’s not just another supplement…
+✅ It fights hypertension & high cholesterol
+✅ Revives blood circulation & arteries
+✅ Supports the heart, liver, and kidney
+✅ It helps to alleviate Migraine symptoms.
+✅ Boosts blood cells for anemia & sickle cell warriors
 
-Ingredients: Greenature Rebootar CD contains a carefully selected blend of natural herbal extracts formulated to support immune health, digestive wellness, antioxidant protection, and overall body vitality.
-
-Suggested Use: Adults: Take as directed on the product label or as recommended by a qualified healthcare professional.`,
-    shortDesc: 'Greenature Rebootar CD – Natural Herbal Wellness Supplement. Experience the benefits of nature with Greenature Rebootar CD.',
+💥 Real results. Real testimonies. Real transformation!`,
+    shortDesc: '💓  REBOOTAR CARDIO — Greenature’s breakthrough formula for Cardiovascular & Blood Health.',
   },
   {
     // ⚠️ NEEDS CORRECT DESCRIPTION – product name "aloe vera Soursop" does not match
@@ -65,17 +114,27 @@ Suggested Use: Adults: Take as directed on the product label or as recommended b
     media: [
       { type: 'image', src: 'media/green-nature-soursop-1.jpg', caption: 'Soursop Leaf Tea – 20 biodegradable bags' },
     ],
-    description: `Greenature Aloe Vera Soap – Natural Herbal Skincare Soap. Experience the refreshing care of nature with Greenature Aloe Vera Soap, a premium herbal soap enriched with the nourishing properties of Aloe Vera. Carefully formulated to gently cleanse, moisturize, and refresh the skin, this soap is suitable for daily use and all skin types.
+    description: `💚  REBOOTAR ALOE-VERA SOAP — the herbal skincare formula that transforms dull, infected, or damaged skin into a smooth, radiant glow.
 
-Made with high-quality natural ingredients, Greenature Aloe Vera Soap is known for its soothing and hydrating properties. It helps remove dirt, excess oil, and impurities while leaving the skin feeling soft, smooth, and revitalized. Its gentle formula supports healthy-looking skin and promotes a fresh, clean feeling after every wash.
+ INGREDIENTS
+Essential oil
+Aloe vera
+Shea butter
+Collagen
+Grape seed oil
 
-Key Features: 🌿 Enriched with Natural Aloe Vera 💧 Helps Moisturize and Hydrate the Skin 🧼 Gently Cleanses Without Over-Drying ✨ Leaves Skin Soft and Smooth 🌱 Suitable for Daily Use 🌸 Refreshes and Revitalizes the Skin ✅ Suitable for All Skin Types.
+ FUNCTIONS
+🌿 Packed with antibacterial and rejuvenating herbs, it helps:
+✅ Clear acne, eczema & rashes
+✅ Fade stretch marks & sunburn
+✅ Restore smooth, even-toned skin
+✅ Support total skin renewal naturally
 
-Ingredients: Greenature Aloe Vera Soap contains Aloe Vera extract, moisturizing agents, natural plant-based ingredients, cleansing agents, and carefully selected skin-conditioning ingredients.
+🔥 Visible results in days — trusted by wellness leaders across Africa!
 
-Suggested Use: Wet the skin with water, lather the soap thoroughly, gently massage onto the face or body, then rinse with clean water. Suitable for everyday use.
-`,
-    shortDesc: 'Greenature Aloe Vera Soap – Natural Herbal Skincare Soap. Experience the refreshing care of nature with Greenature Aloe Vera Soap.',
+💥 Don’t just sell beauty, lead the skin transformation movement with Greenature!
+This is your chance to be among the first distributors & partners in the fast-moving herbal skincare line.`,
+    shortDesc: '💚  REBOOTAR ALOE-VERA SOAP — the herbal skincare formula that transforms dull, infected, or damaged skin into a smooth, radiant glow..',
   },
   {
     // ⚠️ NEEDS CORRECT DESCRIPTION – previous description contained fabricated/fictional details.
